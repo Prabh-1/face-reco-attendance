@@ -1,0 +1,125 @@
+h1 {
+    text-align: center;
+  }
+  
+  body {
+    font-family: 'Asap', sans-serif;
+  }
+  .grad{
+    background-image: linear-gradient(to bottom,rgb(113, 210, 237),rgb(233, 168, 228));
+    height: 100vh;
+  }
+  .center-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .center-image img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: "Asap", sans-serif;
+    cursor: pointer;
+  }
+  
+  .center-button button {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 80px;
+    border: 0;
+    padding: 10px 0;
+    background-color: #9adff8;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .center-button button:hover {
+    background-color: #e097d4;
+  }
+  
+  .login {
+    overflow: hidden;
+    background-color: white;
+    padding: 40px 30px 30px 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+  }
+  
+  .login::before,
+  .login::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 40%;
+    z-index: -1;
+  }
+  
+  .login::before {
+    left: 40%;
+    bottom: -130%;
+    background-color: rgba(69, 105, 144, 0.15);
+    animation: waves 6s infinite linear;
+  }
+  
+  .login::after {
+    left: 35%;
+    bottom: -125%;
+    background-color: rgba(2, 128, 144, 0.2);
+    animation: waves 7s infinite;
+  }
+  
+  .login>input {
+    font-family: "Asap", sans-serif;
+    display: block;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    width: 100%;
+    border: 0;
+    padding: 10px 10px;
+    margin: 15px -10px;
+  }
+  
+  @keyframes waves {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+
+  .mess{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    margin-left: -15px;
+    padding-left: 10px;
+    margin-top: 15px;
+    width: 320px;
+    height: 40px;
+    padding-top: 10px;
+    background-color: #FAA0A0;
+    color: red;
+    border-radius: 10px;
+  }
