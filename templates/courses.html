@@ -1,0 +1,35 @@
+<!-- courses.html -->
+{% extends "base.html" %}
+
+{% block title %}FRAS - Courses{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+{% block content %}
+    <h1>FACE RECOGNITION ATTENDANCE SYSTEM</h1><br>
+    <h2>Select Courses</h2>
+
+    <div class="boxes-container">
+        {% if courses %}
+            {% for course in courses %}
+                {% if is_teacher %}
+                    <a href="{{ url_for('select_course', selected_course=course[0]) }}" >
+                        <div class="box2">
+                            {{ course[0] }}
+                        </div>
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('select_course2', selected_course=course[0]) }}">
+                        <div class="box2">
+                            {{ course[0] }}
+                        </div>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <p>No courses available for the selected year.</p>
+        {% endif %}
+    </div>
+{% endblock %}

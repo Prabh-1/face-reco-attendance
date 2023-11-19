@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}FRAS - Upload Photo{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+{% block content %}
+    <h1>FACE RECOGNITION ATTENDANCE SYSTEM</h1><br>
+    <h2>Upload Photo</h2>
+
+    <div class="login">
+        <form method="post" enctype="multipart/form-data">
+           <input type="file" name="file" accept=".jpg, .jpeg, .png" required>
+           <div class="center-button"><button type="submit">Upload</button></div>
+        </form>
+       </div>
+
+
+{% endblock %}

@@ -1,0 +1,46 @@
+<!-- attendance.html -->
+{% extends "base.html" %}
+
+{% block title %}FRAS - Attendance{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+{% block content %}
+    <h1>FACE RECOGNITION ATTENDANCE SYSTEM</h1><br>
+    <div class="check-attendance-form">
+        <form method="post" action="{{ url_for('Check') }}">
+            <label for="date">Select Date:</label>
+            <input type="date" name="date" id="date" required>
+            <button type="submit">Fetch Attendance</button>
+        </form>
+    </div>
+    
+    <h2>Attendance Records</h2>
+    <div class="page-content">
+    <p>Course: {{ course }}</p>
+    <p>Date: {{ date }}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>URN</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Total Attendance</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{ record['URN'] }}</td>
+                    <td>{{ record['Name'] }}</td>
+                    <td>{{ record['Status'] }}</td>
+                    <td>{{ record['Total Attendance'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}

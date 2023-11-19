@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}FRAS - Select Year{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+{% block content %}
+    <h1>FACE RECOGNITION ATTENDANCE SYSTEM</h1><br>
+        <div class="box">
+        <a href="{{ url_for('Options') }}" >
+          <div class="box1">
+          <h3>Mark Attendance</h3>
+          </div>
+        </a>
+        <a href="{{url_for('Check')}}">
+          <div class="box1">
+           <h3>Check Attendance</h3>
+          </div>
+        </div>
+      </a>
+    
+    {% endblock %}
+</html>

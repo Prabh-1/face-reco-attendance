@@ -1,0 +1,35 @@
+<!-- attendance2.html -->
+{% extends "base.html" %}
+
+{% block title %}FRAS - Attendance{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+{% block content %}
+    <h1>FACE RECOGNITION ATTENDANCE SYSTEM</h1><br>
+    <h2>Attendance Records</h2>
+    <div class="page-content">
+    <p>Course: {{ course }}</p>
+    <p>URN: {{ urn }}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{ record['Date'] }}</td>
+                    <td>{{ record['Time'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Total Attendance: {{ att_score}}</p> 
+</div>
+{% endblock %}

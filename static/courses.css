@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+}
+
+
+.boxes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box2 {
+    background: linear-gradient(to bottom, #ed9af5, #d0bbd8);
+    width: 350px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    border: 3px solid rgb(31, 31, 31);
+    border-radius: 7%;
+    margin: 10px; /* Adjust margin as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    flex: 0 0 calc(25% - 20px);
+    margin-bottom: 20px; /* Increase the margin between rows */
+    margin-top: 20px;
+}
+
+.box2:hover {
+    transform: scale(1.1); /* Apply a scale transform on hover to create a zoom effect */
+}

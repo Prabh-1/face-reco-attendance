@@ -1,0 +1,208 @@
+h1, h2 {
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+}
+body{
+        background-image: linear-gradient(to bottom,rgb(113, 210, 237),rgb(233, 168, 228));
+        height: 100vh;
+ 
+}
+.abc {
+    display: flex;
+    justify-content: center; /* Center the boxes horizontally */
+    align-items: center; /* Center the boxes vertically */  
+}
+.box1 {
+    background: linear-gradient(to bottom, #ed9af5, #d0bbd8);
+    width: 150px ; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    border: 3px solid rgb(31, 31, 31);
+    border-radius: 10%;
+    margin: 50px; /* Adjust margin as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+.box1:hover {
+    transform: scale(1.1); /* Apply a scale transform on hover to create a zoom effect */
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.img{
+    position:relative;
+    margin-left: 97%;
+}
+.topright {
+    position: absolute;
+    top: 11px;
+    right: 85px;
+    font-size: 18px;}
+
+    a{
+        text-decoration: none; color: rgb(46, 12, 78); font: 1em sans-serif;
+    }
+    .center-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        font-family: "Asap", sans-serif;
+        cursor: pointer;
+      }
+      
+      .center-button button {
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        width: 80px;
+        border: 0;
+        padding: 10px 0;
+        background-color: #9adff8;
+        text-align: center;
+        justify-content: center;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .center-button button:hover {
+        background-color: #e097d4;
+      }
+      .login {
+        overflow: hidden;
+        background-color: white;
+        padding: 40px 30px 30px 30px;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+      }
+      
+      .login::before,
+      .login::after {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-top-left-radius: 40%;
+        border-top-right-radius: 45%;
+        border-bottom-left-radius: 35%;
+        border-bottom-right-radius: 40%;
+        z-index: -1;
+      }
+    .login::before {
+        left: 65%;
+        bottom: -130%;
+        background-color: rgba(69, 105, 144, 0.15);
+        animation: waves 6s infinite linear; 
+      }
+      
+      .login::after {
+        left: 60%;
+        bottom: -125%;
+        background-color: rgba(2, 128, 144, 0.2);
+        animation: waves 7s infinite;
+      }
+
+    @keyframes waves {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(180deg);
+        }
+      }
+      .check-attendance-form {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .check-attendance-form label {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .check-attendance-form button {
+    background-color: #610c53;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.check-attendance-form button:hover {
+  background-color: #fff;
+}
+
+
+
+/* Style the page content */
+.page-content {
+  text-align: center;
+}
+
+/* Style the table */
+table {
+  width: 80%;
+  margin: 20px auto; /* Center the table */
+  border-collapse: collapse;
+  background-color: white; /* White background */
+}
+
+th, td {
+  border: 1px solid #ddd; /* Tabular lines */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2; /* Header background color */
+}
+
+/* Style the total attendance paragraph */
+.total-attendance {
+  margin-top: 20px;
+}
+
+.navbar {
+
+  position: fixed;
+  margin-top: 1%;
+  margin-left: 95%;
+  background-color: #610c53; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.navbar a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.navbar:hover{
+  background-color: #fff;
+  color: #610c53;
+  
+
+}
+.navbar a:hover{
+  color: #610c53;
+}

@@ -5,24 +5,34 @@
 <head>
     <title>FRAS</title>
     <link rel="stylesheet" href="static/login.css">
+    <script>
+        function clearErrorMessage() {
+            var errorMessageDiv = document.getElementById('error-message');
+            errorMessageDiv.style.display = 'none';
+        }
+    </script>
+    
+    
 </head>
-<body>
-<div class="grad">
-    <h1>FACE RECOGNITION ATTENDANCE SYSTEM</h1>
-    <form class="login" method="post">
+<body class="grad">
+<div >
+    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 50px;">FACE RECOGNITION ATTENDANCE SYSTEM</h1>
+    <form class="login" method="post" oninput="clearErrorMessage()">
         <div class="center-image">
-            <img src="static/att.png" width="200px" height="200px">
+            <img src="static/atten.png" width="200px" height="200px">
         </div>
         <input type="text" name="username" placeholder="Username" required>
-<input type="password" name="password" placeholder="Password" required>
-
+        <input type="password" name="password" placeholder="Password" required>
+    
         <div class="center-button">
             <button>Login</button>
         </div>
     </form>
     {% if 'Incorrect' in msg %}
-    <div class='mess'>
-      {{msg}}
+    <div id="error-message" class='mess' >
+       
+            {{msg}}
+   
     </div>
     {% endif %}
 </div>

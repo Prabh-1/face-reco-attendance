@@ -2,13 +2,13 @@ h1 {
     text-align: center;
   }
   
-  body {
-    font-family: 'Asap', sans-serif;
-  }
+
   .grad{
     background-image: linear-gradient(to bottom,rgb(113, 210, 237),rgb(233, 168, 228));
     height: 100vh;
   }
+
+
   .center-image {
     display: flex;
     justify-content: center;
@@ -113,13 +113,15 @@ h1 {
     font-size: 14px;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
-    margin-left: -15px;
+    margin-left: 41%;
     padding-left: 10px;
-    margin-top: 15px;
+    margin-top: 35%;
+    /* align-items: center; */
+    text-align: center;
     width: 320px;
     height: 40px;
     padding-top: 10px;
-    background-color: #FAA0A0;
-    color: red;
-    border-radius: 10px;
+    background-color: #f9f7f7;
+    color: rgb(0, 0, 0); 
+    border-radius:10px;
   }

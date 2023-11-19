@@ -1,0 +1,39 @@
+<!-- year.html -->
+{% extends "base.html" %}
+
+{% block title %}FRAS - Select Year{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+{% block content %}
+    <h1>FACE RECOGNITION ATTENDANCE SYSTEM</h1><br>
+    <h2>SELECT YEAR</h2>
+    <div class="abc">
+        <div class="box">
+            <a href="{{ url_for('select_year', selected_year='1') }}">
+                <div class="box1">
+                    <h3>1<sup>st</sup></h3>
+                </div>
+            </a>
+            <a href="{{ url_for('select_year', selected_year='2') }}">
+                <div class="box1">
+                    <h3>2<sup>nd</sup></h3>
+                </div>
+            </a>
+        </div>
+        <div class="box">
+            <a href="{{ url_for('select_year', selected_year='3') }}">
+                <div class="box1">
+                    <h3>3<sup>rd</sup></h3>
+                </div>
+            </a>
+            <a href="{{ url_for('select_year', selected_year='4') }}">
+                <div class="box1">
+                    <h3>4<sup>th</sup></h3>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock %}
